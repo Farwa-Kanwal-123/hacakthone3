@@ -156,12 +156,21 @@
 
 
 
+
+
+
+
+
+
+//^ perfect code
+
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FaUtensils, FaClock, FaStar, FaCheckCircle, FaTimesCircle, FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
+import Hero from '@/components/OthersHero'
 
 interface IChefDetail {
   _id: string;
@@ -169,7 +178,11 @@ interface IChefDetail {
   position: string;
   experience: number;
   specialty: string;
-  image: any;
+  image: {
+    asset: {
+      _ref: string;
+    };
+  };
   description: string;
   available: boolean;
 }
@@ -222,6 +235,8 @@ export default async function ChefDetailPage({ params }: { params: { id: string 
   }
 
   return (
+    <div>
+      <Hero heading="Chef Details"/>
     <div className="container mx-auto px-6 py-12 max-w-6xl">
       <Link
         href="/our-chef"
@@ -316,5 +331,22 @@ export default async function ChefDetailPage({ params }: { params: { id: string 
         </Link>
       </div>
     </div>
+    </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

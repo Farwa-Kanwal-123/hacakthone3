@@ -24,7 +24,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const HomeHeader = () => {
   return (
-    <header className="max-w-[1320px] mx-auto bg-[#0D0D0D] text-white z-50 sticky">
+    <header className="max-w-5xl mx-auto bg-[#0D0D0D] text-white z-50 sticky">
       <h1 className="text-2xl font-bold w-full text-center pt-8"><span className="text-[#FF9F0D]">Food</span>tuck</h1>
       <div className="wrapper flex justify-between items-center py-4 lg:px-3">
 
